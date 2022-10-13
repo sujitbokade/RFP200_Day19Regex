@@ -9,6 +9,7 @@ public class UserRegistration {
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.validFirstName();
         userRegistration.validLastName();
+        userRegistration.validEmail();
     }
 
     public void validFirstName() {
@@ -32,6 +33,18 @@ public class UserRegistration {
             System.out.println("Last Name is Valid");
         } else {
             System.out.println("Last Name is Invalid");
+        }
+    }
+
+    public void validEmail() {
+        Pattern pattern = Pattern.compile("^[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2})*$");
+        System.out.println("Enter Email");
+        String email = sc.next();
+        Matcher match = pattern.matcher(email);
+        if (match.matches()) {
+            System.out.println("Email is Valid");
+        } else {
+            System.out.println("Email is Invalid");
         }
     }
 }
