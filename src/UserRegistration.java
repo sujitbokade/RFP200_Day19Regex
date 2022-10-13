@@ -10,7 +10,7 @@ public class UserRegistration {
 
     public void validFirstName() {
         Scanner sc = new Scanner(System.in);
-        Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{1,}$");
+        Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
         System.out.println("Enter FirstName");
         String firstName = sc.next();
         Matcher match = pattern.matcher(firstName);
