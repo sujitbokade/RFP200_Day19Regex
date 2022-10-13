@@ -7,10 +7,10 @@ public class UserRegistration {
 
     public static void main(String[] args) {
         UserRegistration userRegistration = new UserRegistration();
-        userRegistration.validFirstName();
-        userRegistration.validLastName();
-        userRegistration.validEmail();
-        userRegistration.validMobileNumber();
+//        userRegistration.validFirstName();
+//        userRegistration.validLastName();
+//        userRegistration.validEmail();
+//        userRegistration.validMobileNumber();
         userRegistration.validPassword();
     }
 
@@ -63,7 +63,7 @@ public class UserRegistration {
     }
 
     public void validPassword() {
-        Pattern pattern = Pattern.compile("^[a-z]{8}$");
+        Pattern pattern = Pattern.compile("(?=.*[A-Z]+[a-z]).{8,}");
         System.out.println("Enter Password");
         String password = sc.next();
         Matcher match = pattern.matcher(password);
